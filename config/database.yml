@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  username: user
   password: password
   socket: /var/run/mysqld/mysqld.sock
 
@@ -21,7 +21,7 @@ development:
   # <<: *default
   primary:
     database: chat_dev
-    user: root
+    user: user
     password: password
     adapter: mysql2 
   primary_replica:
@@ -32,7 +32,7 @@ development:
     replica: true
   chats:
     database: my_chats_database
-    user: root
+    user: user
     password: password
     adapter: mysql2
     migrations_paths: db/chats_migrate

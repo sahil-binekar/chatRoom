@@ -38,12 +38,13 @@ h2 span {
       <%= render @rooms %>
     </div>
     <%= render partial: "layouts/new_room_form" %>
+    <%= link_to 'Sign Out', signout_path,  :method => :get %>
   </div>
   <div class="w-2/3 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
     <div class="mb-8">
     <% if @single_room %>
       <p class="text-sm text-gray-600 flex items-center">
-        <div class="text-gray-900 font-bold text-xl mb-2">Start Chatting <%= @single_room.name %> Room</div>
+        <div class="text-gray-900 font-bold text-xl mb-2">Start Chatting <%= @user&.username || @single_room.name %> Room</div>
       </p>
       <%= turbo_stream_from @single_room %>
       <div id="messages">

@@ -201,6 +201,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.0.4)
+      railties (>= 6.0.0)
     strscan (3.0.3)
     tailwindcss-rails (2.0.8)
       railties (>= 6.0.0)
@@ -254,6 +256,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
+  stimulus-rails (~> 1.0)
   tailwindcss-rails (~> 2.0)
   turbo-rails (~> 1.0)
   turbolinks (~> 5)
